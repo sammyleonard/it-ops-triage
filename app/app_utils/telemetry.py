@@ -13,7 +13,7 @@
 # limitations under the License.
 
 import logging
-import os
+import os 
 
 def setup_telemetry() -> str | None:
     """Configure GenAI prompt/response logging via OpenTelemetry."""
