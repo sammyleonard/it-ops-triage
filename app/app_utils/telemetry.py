@@ -20,7 +20,7 @@ def setup_telemetry() -> str | None:
     # Keep full prompts/responses out of trace span attributes (use GenAI logging instead).
     os.environ.setdefault("ADK_CAPTURE_MESSAGE_CONTENT_IN_SPANS", "false")
     os.environ.setdefault("GOOGLE_CLOUD_AGENT_ENGINE_ENABLE_TELEMETRY", "true")
-
+ 
     bucket = os.environ.get("LOGS_BUCKET_NAME")
     capture_content = os.environ.get(
         "OTEL_INSTRUMENTATION_GENAI_CAPTURE_MESSAGE_CONTENT", "false"
